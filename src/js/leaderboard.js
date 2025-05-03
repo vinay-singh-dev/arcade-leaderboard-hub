@@ -49,104 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }).sort((a, b) => b.score - a.score) // Sort by score descending
       .map((person, index) => ({...person, rank: index + 1})); // Add rank based on sorted position
   }
-  
-  // Backup data in case the API fails
-  // function getBackupData() {
-  //   const backupData = [
-  //     { 
-  //       id: 4, 
-  //       name: "Michael Brown", 
-  //       score: 9110, 
-  //       avatar: "src/assets/avatars/avatar4.jpg", 
-  //       rank: 4,
-  //       details: {
-  //         arcadeGames: 3050,
-  //         triviaGames: 2960,
-  //         labCourses: 3100,
-  //         skillBadges: 15
-  //       }
-  //     },
-  //     { 
-  //       id: 5, 
-  //       name: "Emma Wilson", 
-  //       score: 8950, 
-  //       avatar: "src/assets/avatars/avatar5.jpg", 
-  //       rank: 5,
-  //       details: {
-  //         arcadeGames: 2900,
-  //         triviaGames: 3000,
-  //         labCourses: 3050,
-  //         skillBadges: 12
-  //       }
-  //     },
-  //     { 
-  //       id: 6, 
-  //       name: "Robert Davis", 
-  //       score: 8800, 
-  //       avatar: "src/assets/avatars/avatar6.jpg", 
-  //       rank: 6,
-  //       details: {
-  //         arcadeGames: 2850,
-  //         triviaGames: 2950,
-  //         labCourses: 3000,
-  //         skillBadges: 10
-  //       }
-  //     },
-  //     { 
-  //       id: 7, 
-  //       name: "Olivia Taylor", 
-  //       score: 8650, 
-  //       avatar: "src/assets/avatars/avatar7.jpg", 
-  //       rank: 7,
-  //       details: {
-  //         arcadeGames: 2800,
-  //         triviaGames: 2900,
-  //         labCourses: 2950,
-  //         skillBadges: 9
-  //       }
-  //     },
-  //     { 
-  //       id: 8, 
-  //       name: "William Clark", 
-  //       score: 8500, 
-  //       avatar: "src/assets/avatars/avatar8.jpg", 
-  //       rank: 8,
-  //       details: {
-  //         arcadeGames: 2750,
-  //         triviaGames: 2850,
-  //         labCourses: 2900,
-  //         skillBadges: 8
-  //       }
-  //     },
-  //     { 
-  //       id: 9, 
-  //       name: "Sophia Lee", 
-  //       score: 8350, 
-  //       avatar: "src/assets/avatars/avatar9.jpg", 
-  //       rank: 9,
-  //       details: {
-  //         arcadeGames: 2700,
-  //         triviaGames: 2800,
-  //         labCourses: 2850,
-  //         skillBadges: 7
-  //       }
-  //     },
-  //     { 
-  //       id: 10, 
-  //       name: "James Miller", 
-  //       score: 8200, 
-  //       avatar: "src/assets/avatars/avatar10.jpg", 
-  //       rank: 10,
-  //       details: {
-  //         arcadeGames: 2650,
-  //         triviaGames: 2750,
-  //         labCourses: 2800,
-  //         skillBadges: 6
-  //       }
-  //     }
-  //   ];
-  //   return backupData;
-  // }
+
   
   // Function to populate the leaderboard
   function populateLeaderboard(data) {
@@ -177,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
       leaderboardItem.innerHTML = `
         <div class="leaderboard-rank">${person.rank}</div>
         <div class="leaderboard-info">
-          &nbsp;&nbsp;&nbsp;<img src="/public/avatar.png" alt="${person.name}" class="leaderboard-avatar">
+          &nbsp;&nbsp;&nbsp;<img src="public/avatar.png" alt="${person.name}" class="leaderboard-avatar">
           <div class="leaderboard-name">${person.name}</div>
         </div>
         <div class="leaderboard-points">
